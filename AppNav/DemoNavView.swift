@@ -13,28 +13,28 @@ struct DemoNavView: View {
     
     var body: some View {
         
-            TabView {
+//            TabView {
                 
                 HomeView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-                
-                
-                
-                FeedView()
-                    .tabItem {
-                        Label("Feed", systemImage: "list.bullet")
-                    }
-                
-                
-                
-                
-                SettingsView()
-                    .tabItem {
-                        Label("Settings", systemImage: "gear")
-                    }
-            }
+//                    .tabItem {
+//                        Label("Home", systemImage: "house")
+//                    }
+//
+//
+//
+//                FeedView()
+//                    .tabItem {
+//                        Label("Feed", systemImage: "list.bullet")
+//                    }
+//
+//
+//
+//
+//                SettingsView()
+//                    .tabItem {
+//                        Label("Settings", systemImage: "gear")
+//                    }
+//            }
             
         
     }

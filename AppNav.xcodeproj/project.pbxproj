@@ -14,8 +14,6 @@
 		5DA61DF32852BBE500D82CD2 /* DemoNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61DF22852BBE500D82CD2 /* DemoNavView.swift */; };
 		5DA61DF62852C00E00D82CD2 /* NavState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61DF52852C00E00D82CD2 /* NavState.swift */; };
 		5DA61DF92852C51B00D82CD2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61DF82852C51B00D82CD2 /* HomeView.swift */; };
-		5DA61DFB2852C52000D82CD2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61DFA2852C52000D82CD2 /* SettingsView.swift */; };
-		5DA61DFD2852C52500D82CD2 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61DFC2852C52500D82CD2 /* FeedView.swift */; };
 		5DA61E002852C79900D82CD2 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61DFF2852C79900D82CD2 /* ImageView.swift */; };
 		5DA61E022852C79F00D82CD2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61E012852C79F00D82CD2 /* ActivityView.swift */; };
 		5DA61E042852C7A400D82CD2 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA61E032852C7A400D82CD2 /* ShapesView.swift */; };
@@ -34,8 +32,6 @@
 		5DA61DF22852BBE500D82CD2 /* DemoNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoNavView.swift; sourceTree = "<group>"; };
 		5DA61DF52852C00E00D82CD2 /* NavState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavState.swift; sourceTree = "<group>"; };
 		5DA61DF82852C51B00D82CD2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		5DA61DFA2852C52000D82CD2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		5DA61DFC2852C52500D82CD2 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		5DA61DFF2852C79900D82CD2 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		5DA61E012852C79F00D82CD2 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		5DA61E032852C7A400D82CD2 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
@@ -75,12 +71,12 @@
 		5DA61DE32852BB5F00D82CD2 /* AppNav */ = {
 			isa = PBXGroup;
 			children = (
-				5DA61DFE2852C78A00D82CD2 /* Destinations */,
 				5DA61DF42852BFFA00D82CD2 /* ViewModel */,
 				5DA61DE42852BB5F00D82CD2 /* AppNavApp.swift */,
 				5DA61DE62852BB5F00D82CD2 /* ContentView.swift */,
 				5DA61DF22852BBE500D82CD2 /* DemoNavView.swift */,
-				5DA61DF72852C50800D82CD2 /* MainTabs */,
+				5DA61DF82852C51B00D82CD2 /* HomeView.swift */,
+				5DA61DFE2852C78A00D82CD2 /* DestinationViews */,
 				5DA61DE82852BB6000D82CD2 /* Assets.xcassets */,
 				5DA61DEA2852BB6000D82CD2 /* Preview Content */,
 			);
@@ -103,17 +99,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5DA61DF72852C50800D82CD2 /* MainTabs */ = {
-			isa = PBXGroup;
-			children = (
-				5DA61DF82852C51B00D82CD2 /* HomeView.swift */,
-				5DA61DFA2852C52000D82CD2 /* SettingsView.swift */,
-				5DA61DFC2852C52500D82CD2 /* FeedView.swift */,
-			);
-			path = MainTabs;
-			sourceTree = "<group>";
-		};
-		5DA61DFE2852C78A00D82CD2 /* Destinations */ = {
+		5DA61DFE2852C78A00D82CD2 /* DestinationViews */ = {
 			isa = PBXGroup;
 			children = (
 				5DA61DFF2852C79900D82CD2 /* ImageView.swift */,
@@ -124,7 +110,7 @@
 				5DA61E092852C7B600D82CD2 /* FormView.swift */,
 				5DA61E0B2852C7BE00D82CD2 /* SignUpView.swift */,
 			);
-			path = Destinations;
+			path = DestinationViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,13 +185,11 @@
 			files = (
 				5DA61E0A2852C7B600D82CD2 /* FormView.swift in Sources */,
 				5DA61E002852C79900D82CD2 /* ImageView.swift in Sources */,
-				5DA61DFD2852C52500D82CD2 /* FeedView.swift in Sources */,
 				5DA61DE72852BB5F00D82CD2 /* ContentView.swift in Sources */,
 				5DA61DE52852BB5F00D82CD2 /* AppNavApp.swift in Sources */,
 				5DA61E082852C7AF00D82CD2 /* ProfileView.swift in Sources */,
 				5DA61DF32852BBE500D82CD2 /* DemoNavView.swift in Sources */,
 				5DA61E022852C79F00D82CD2 /* ActivityView.swift in Sources */,
-				5DA61DFB2852C52000D82CD2 /* SettingsView.swift in Sources */,
 				5DA61DF92852C51B00D82CD2 /* HomeView.swift in Sources */,
 				5DA61E0C2852C7BE00D82CD2 /* SignUpView.swift in Sources */,
 				5DA61E062852C7AA00D82CD2 /* MediaView.swift in Sources */,

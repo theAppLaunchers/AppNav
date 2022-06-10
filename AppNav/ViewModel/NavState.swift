@@ -11,6 +11,7 @@ import SwiftUI
 class NavState: ObservableObject {
     
     @Published var navType: NavigationType = .oldNavLink
+    @Published var destination: Destination = .imageView
     
 }
 
@@ -90,5 +91,30 @@ extension View {
         case .signUpView:
             SignUpView()
         }
+    }
+}
+
+struct DestinationSwitcher: View {
+    var dest: Destination
+    
+    var body: some View {
+        
+        switch dest {
+        case .imageView:
+            ImageView()
+        case .activityView:
+            ActivityView()
+        case .shapesView:
+            ShapesView()
+        case .mediaView:
+            MediaView()
+        case .profileView:
+            ProfileView()
+        case .formView:
+            FormView()
+        case .signUpView:
+            SignUpView()
+        }
+        
     }
 }
