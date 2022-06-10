@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ActivityView: View {
     var body: some View {
-        Text("ActivityView")
+        VStack{
+            
+            Text("Activity View")
+            
+        }.navigationTitle("Activity View")
     }
 }
 

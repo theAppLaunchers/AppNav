@@ -12,7 +12,17 @@ class NavState: ObservableObject {
     
     @Published var navType: NavigationType = .oldNavLink
     @Published var destination: Destination = .imageView
+    @Published var navPath = NavigationPath()
     
+    static let viewList: [Destination] = [
+        .imageView,
+        .activityView,
+        .formView,
+        .mediaView,
+        .profileView,
+        .shapesView,
+        .signUpView
+    ]
 }
 
 enum NavigationType: String, CaseIterable, Hashable {
@@ -29,7 +39,7 @@ enum NavigationType: String, CaseIterable, Hashable {
 extension View {
     
     @ViewBuilder
-    func navType(_ navType: NavigationType) -> some View {
+    func navType(_ navType: NavigationType, navPath: Binding<NavigationPath>) -> some View {
         switch navType {
         case .oldNavLink:
             NavigationView {
@@ -46,16 +56,14 @@ extension View {
             }
             
         case .newNavPath:
-            NavigationStack {
+            NavigationStack(path: navPath) {
                 self
             }
         case .simpleEnum:
             VStack {
                 self
             }
-            
         }
-        
     }
 }
 
@@ -94,27 +102,4 @@ extension View {
     }
 }
 
-struct DestinationSwitcher: View {
-    var dest: Destination
-    
-    var body: some View {
-        
-        switch dest {
-        case .imageView:
-            ImageView()
-        case .activityView:
-            ActivityView()
-        case .shapesView:
-            ShapesView()
-        case .mediaView:
-            MediaView()
-        case .profileView:
-            ProfileView()
-        case .formView:
-            FormView()
-        case .signUpView:
-            SignUpView()
-        }
-        
-    }
-}
+

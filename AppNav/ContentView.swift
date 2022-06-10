@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var navState: NavState
     var body: some View {
-        DemoNavView()
+        HomeView()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay(alignment: .bottomTrailing){
                 HStack {
@@ -24,14 +24,15 @@ struct ContentView: View {
                         }
                         
                     } label: {
-                        Image(systemName: "house")
+                        Image(systemName: "list.bullet")
                             .padding()
                             .background(.thinMaterial)
                             .cornerRadius(4)
                             .clipShape(Circle())
                     }.padding()
+                        
                        
-                }
+                }.offset(y: 25)
             }
     }
     
@@ -49,8 +50,8 @@ struct ContentView: View {
             case .simpleEnum:
                 Text(NavigationType.simpleEnum.rawValue)
             }
-            Text("\(navState.destination.rawValue)")
-        }
+//            Text("\(navState.destination.rawValue)")
+        }.font(.title3.bold())
     }
     
     
